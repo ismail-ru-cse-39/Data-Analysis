@@ -20,3 +20,4 @@ daily_engagement = read_csv('daily_engagement.csv')
 for engagement_record in daily_engagement:
     engagement_record['account_key'] = engagement_record['acct']
     del[engagement_record['acct']]
+print(daily_engagement[0]['account_key'])
