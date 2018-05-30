@@ -46,7 +46,7 @@ unique_engagement_students = get_unique_data(daily_engagement)
 
 udacity_test_accounts = set()
 for enrollment in enrollments:
-    if enrollment['is_udacity']:
+    if enrollment['is_udacity'] == 'True':
         udacity_test_accounts.add(enrollment['account_key'])
 print(len(udacity_test_accounts))
 
