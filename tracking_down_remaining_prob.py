@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Tue May 29 22:27:47 2018
+
+@author: Ismail
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Tue May 29 21:26:00 2018
 
 @author: Ismail
@@ -36,17 +43,6 @@ for engagement_record in daily_engagement:
     
 unique_engagement_students = get_unique_data(daily_engagement)
 
-num_prob_students = 0
-
-for enrollment in enrollments:
-    student = enrollment['account_key']
-    if (student not in unique_engagement_students and
-        enrollment['join_date'] != enrollment['cancel_date']):
-        print (enrollment)
-        num_prob_students += 1
-
-print(num_prob_students)
-
 
 udacity_test_accounts = set()
 for enrollment in enrollments:
@@ -61,8 +57,6 @@ def remove_udacity_accounts(data):
     for data_point in data:
         if data_point['account_key'] not in udacity_test_accounts:
             non_udacity_data.append(data_point)
-    #print(non_udacity_data)
-   # print()
     return non_udacity_data
 
 non_udacity_enrollments = remove_udacity_accounts(enrollments)
