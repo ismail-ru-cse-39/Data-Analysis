@@ -112,7 +112,9 @@ for enrollment in non_udacity_enrollments:
     if not enrollment['is_canceled']  or  enrollment['days_to_cancel'] > 7:
         account_key = enrollment['account_key']
         enrollment_date = enrollment['join_date']
-        paid_students[account_key] = enrollment_date
+        
+        if account_key not in paid_students or enrollment_date > paid_students[account_key]:
+            paid_students[account_key] = enrollment_date
 
 print(len(paid_students))
 #print(cnt)
@@ -125,7 +127,7 @@ print(len(paid_students))
 #of the student joining
 def within_one_week(join_date, engagement_date):
     time_delta = engagement_date - join_date
-    return time_delta.days < 7
+    return  time_delta.days < 7
 
 #Remove data point corresponds to any student who cancel trial
 
