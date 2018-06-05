@@ -255,3 +255,8 @@ def describe_data(data):
 
 total_minutes = list(total_minutes_by_account.values())
 describe_data(total_minutes)
+
+print()
+lesson_completed_by_account = sum_grouped_items(engagement_by_account, 'lessons_completed')
+
+describe_data(list(lesson_completed_by_account.values()))
