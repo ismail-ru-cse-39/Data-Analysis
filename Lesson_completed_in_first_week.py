@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jun  4 17:47:43 2018
-Debuging data analysis code solution
-start from line 200
-
+Created on Mon Jun  4 22:24:20 2018
+Lesson completed in first week
+start code from line 220
 @author: Ismail
 """
-
-
 
 
 import unicodecsv
@@ -215,6 +212,46 @@ print('Debugging data analysis code solution:')
 print()
 print('Maximum minutes:', max_minutes)
 
+"""
 for engagement_record in paid_engagement_in_first_week:
     if engagement_record['account_key'] == student_with_max_minutes:
         print(engagement_record)
+        """
+
+
+#LESSON COMPLETED FOR FIRST WEEK
+print()
+print()
+print('Lesson completed in first week:')
+
+def group_data(data, key_name):
+    grouped_data = defaultdict(list)
+    
+    for data_point in data:
+        key = data_point[key_name]
+        grouped_data[key].append(data_point)
+    return grouped_data
+
+engagement_by_account = group_data(paid_engagement_in_first_week, 'account_key')
+
+def sum_grouped_items(grouped_data, field_name):
+    summed_data ={}
+    
+    for key, data_points in grouped_data.items():
+        total = 0
+        for data_point in data_points:
+            total += data_point[field_name]
+        summed_data[key] = total
+    return summed_data
+
+total_minutes_by_account = sum_grouped_items(engagement_by_account, 'total_minutes_visited')
+
+
+def describe_data(data):
+    print('Mean:', np.mean(data))
+    print('Standard deviation:', np.std(data))
+    print('Minimum:', np.min(data))
+    print('Maximum:',np.max(data))
+
+total_minutes = list(total_minutes_by_account.values())
+describe_data(total_minutes)
