@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jun  5 16:08:12 2018
-Number of visits in first week
-code start from line 152
+Created on Tue Jun  5 17:36:25 2018
+Spliting out passing students
+Code starts from line 290
 @author: Ismail
 """
+
+
 
 
 
@@ -284,3 +286,37 @@ days_visited_by_account = sum_grouped_items(engagement_by_account, 'has_visited'
 
 describe_data(list(days_visited_by_account.values()))
 
+
+#SPLITITNG OUT PASSING STUDENTS
+
+print()
+print()
+print('Splitting out passing students:')
+print()
+
+
+subway_project_lesson_keys = ['746169184', '3176718735']
+
+pass_subway_project = set()
+
+for submission in paid_submissions:
+    project = submission['lesson_key']
+    rating = submission['assigned_rating']
+    
+    if project in subway_project_lesson_keys and (rating == 'PASSED' or rating == 'DISTINCTION'):
+        pass_subway_project.add(submission['account_key'])
+
+print('Length of pass_subway_project:', len(pass_subway_project)) 
+
+
+passing_engagement = []
+non_passing_engagement = []
+
+for engagement_record in paid_engagement_in_first_week:
+    if engagement_record['account_key'] in pass_subway_project:
+        passing_engagement.append(engagement_record)
+    else:
+        non_passing_engagement.append(engagement_record)
+    
+print('Length of passing_engagement:', len(passing_engagement))
+print('Length of non_passing_engagement:', len(non_passing_engagement))
