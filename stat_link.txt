@@ -1,0 +1,7 @@
+Intro to inferential statistics:
+
+https://www.udacity.com/course/intro-to-inferential-statistics--ud201
+
+Intro to descriptive statistics:
+
+https://www.udacity.com/course/intro-to-descriptive-statistics--ud827
