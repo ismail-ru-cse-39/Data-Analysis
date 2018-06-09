@@ -414,3 +414,16 @@ describe_data_and_make_histogram(list(non_passing_minutes.values()))
 print('Passing_students:')
 passing_minutes = sum_grouped_items(passing_engagement_by_account, 'has_visited')
 describe_data_and_make_histogram(list(passing_minutes.values()))
+
+#improving histogram
+print()
+print()
+print('Improving histogram:')
+print()
+
+
+import seaborn as sns
+
+plt.hist(list(passing_minutes.values()), bins = 8)
+plt.xlabel('Number of days')
+plt.title('Distribution of minutes has been visited'+'for students who pass the subway project')
