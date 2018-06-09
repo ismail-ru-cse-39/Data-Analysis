@@ -5,3 +5,8 @@ https://www.udacity.com/course/intro-to-inferential-statistics--ud201
 Intro to descriptive statistics:
 
 https://www.udacity.com/course/intro-to-descriptive-statistics--ud827
+
+
+A/B testing:
+
+https://www.udacity.com/course/ab-testing--ud257
