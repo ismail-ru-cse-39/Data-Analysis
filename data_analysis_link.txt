@@ -1,0 +1,10 @@
+UDACITY:
+https://www.youtube.com/watch?v=jZEbCVZzwUk&index=2&list=PLfK6fiwk6848Mooj0NK01WjE3vIqAhF0J
+
+https://classroom.udacity.com/courses/ud170/lessons/5430778793/concepts/54140889150923
+
+DATACAMP:
+https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1
+
+MACHINE LEARNING:
+https://www.udacity.com/course/intro-to-machine-learning--ud120
