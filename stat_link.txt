@@ -10,3 +10,6 @@ https://www.udacity.com/course/intro-to-descriptive-statistics--ud827
 A/B testing:
 
 https://www.udacity.com/course/ab-testing--ud257
+
+Online stat:
+http://onlinestatbook.com/
